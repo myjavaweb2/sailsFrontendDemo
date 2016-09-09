@@ -6,29 +6,29 @@
 
 <%- partial ('partials/statusmessage.ejs') %>
 
-<h2>Employees</h2>
+<h2>Musicians</h2>
 <table class="table table-striped table-bordered">
   <tr>
-    <th>ID</th>
+    <th>Musician ID</th>
     <th>First Name</th>
     <th>Last Name</th>
-    <th>Email</th>
-    <th>Home Phone</th>
-    <th>Cell Phone</th>
-    <th>Password</th>
-    <th>Active</th>
+    <th>Type of Music</th>
+    <th>Home City</th>
+    <th>Home State</th>
+    <th>Phone</th>
+    <th>Salary</th>
   </tr>
-  <% if(typeof employees != "undefined" && employees.length > 0){ %>
-    <% employees.forEach(function(employee){ %>
+  <% if(typeof musicians != "undefined" && musicians.length > 0){ %>
+    <% musicians.forEach(function(musician){ %>
       <tr>
-        <td><%= employee.id %></td>
-        <td><%= employee.firstName %></td>
-        <td><%= employee.lastName %></td>
-        <td><%= employee.email %></td>
-        <td><%= employee.homePhone %></td>
-        <td><%= employee.cellPhone %></td>
-        <td><%= employee.password %></td>
-        <td><%= employee.active %></td>
+        <td><%= musician.musicianID %></td>
+        <td><%= musician.firstName %></td>
+        <td><%= musician.lastName %></td>
+        <td><%= musician.typeOfMusic %></td>
+        <td><%= musician.homeCity %></td>
+        <td><%= musician.homeState %></td>
+        <td><%= musician.phone %></td>
+        <td><%= musician.salary %></td>
       </tr>
     <% }) %>
   <% }else{ %>

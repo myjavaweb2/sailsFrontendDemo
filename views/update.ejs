@@ -1,13 +1,19 @@
 <ol class="breadcrumb">
     <li><a href="/">Home</a></li>
-    <li class="active">Add Musician</a></li>
+    <li class="active">Edit Musician</a></li>
 </ol>
 
 <br/>
 <%- partial ('partials/statusmessage.ejs') %>
 
-<h2>Add Musician</h2>
-<form action="/create" method="POST" class="form-horizontal">
+<h2>Edit Musician</h2>
+<form action="/update" method="POST" class="form-horizontal">
+  <div class="form-group">
+    <label for="musicianID" class="col-sm-2 control-label">Musician ID</label>
+    <div class="col-sm-10">
+      <input type="number" class="form-control" id="musicianID" name="musicianID" placeholder="Musician ID">
+    </div>
+  </div>
   <div class="form-group">
     <label for="firstName" class="col-sm-2 control-label">First Name</label>
     <div class="col-sm-10">
@@ -23,36 +29,36 @@
   <div class="form-group">
     <label for="typeOfMusic" class="col-sm-2 control-label">Type of Music</label>
     <div class="col-sm-10">
-      <input type="typeOfMusic" class="form-control" id="typeOfMusic" name="typeOfMusic" placeholder="Type of Music">
+      <input type="text" class="form-control" id="typeOfMusic" name="typeOfMusic" placeholder="Type of Music">
     </div>
   </div>
   <div class="form-group">
     <label for="homeCity" class="col-sm-2 control-label">Home City</label>
     <div class="col-sm-10">
-      <input type="homeCity" class="form-control" id="homeCity" name="homeCity" placeholder="Home City">
+      <input type="text" class="form-control" id="homeCity" name="homeCity" placeholder="Home City">
     </div>
   </div>
   <div class="form-group">
     <label for="homeState" class="col-sm-2 control-label">Home State</label>
     <div class="col-sm-10">
-      <input type="homeState" class="form-control" id="homeState" name="homeState" placeholder="Home State">
+      <input type="text" class="form-control" id="homeState" name="homeState" placeholder="Home State">
     </div>
   </div>
   <div class="form-group">
     <label for="phone" class="col-sm-2 control-label">Phone</label>
     <div class="col-sm-10">
-      <input type="phone" class="form-control" id="phone" name="phone" placeholder="###-###-####">
+      <input type="tel" class="form-control" id="phone" name="phone" placeholder="###-###-####">
     </div>
   </div>
   <div class="form-group">
-    <label for="salary" class="col-sm-2 control-label">Salary</label>
+    <label for="phone" class="col-sm-2 control-label">Salary</label>
     <div class="col-sm-10">
-      <input type="salary" class="form-control" id="salary" name="salary" placeholder="Salary">
+      <input type="number" class="form-control" id="salary" name="salary" placeholder="Salary">
     </div>
   </div>
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
-      <button type="submit" class="btn btn-default">Add Musician</button>
+      <button type="submit" class="btn btn-default">Edit Musician</button>
     </div>
   </div>
 </form>
